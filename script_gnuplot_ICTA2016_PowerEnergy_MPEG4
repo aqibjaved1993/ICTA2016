@@ -1,0 +1,19 @@
+#Script for latency of Routing algorithm for ICTA2016
+set term postscript eps color blacktext "PE" 24
+set out "ICTA2016_PowerEnergy_MPEG4.eps"
+set title "RA_PowerEnergy_MPEG-4"
+set xlabel "Packet Injection Rate (PIR)"
+#set xrange [0:10]
+set ylabel "Power Energy (J)"
+#set key top left
+set key bottom right
+plot "XY_RA_out_MPEG4" using 1:8 title "XY_RA" lw 10 lc rgb "blue", \
+"WEST_FIRST_RA_out_MPEG4" using 1:8 title "WEST_FIRST_RA" lw 10 lc rgb "red",\
+"NORTH_LAST_RA_out_MPEG4" using 1:8 title "NORTH_LAST_RA" lw 10 lc rgb "black",\
+"NEGATIVE_FIRST_RA_out_MPEG4" using 1:8 title "NEGATIVE_FIRST_RA" lw 10 lc rgb "green",\
+"ODD_EVEN_RA_out_MPEG4" using 1:8 title "ODD_EVEN_RA" lw 10 lc rgb "gray"
+#set output
+quit
+#lt rgb "#FF00FF"
+
+
